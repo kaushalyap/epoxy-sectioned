@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="title"
+            type="String"
+             />
+        <variable
+            name="rescheduleButtonVisibility"
+            type="Integer"
+            />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal" android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/darker_gray"
+        android:padding="4dp">
+        <TextView
+            android:id="@+id/tv_header"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@{title}"/>
+
+        <Button
+            android:id="@+id/btn_reschedule"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="@{rescheduleButtonVisibility}"
+            android:text="@string/btn_reschedule"/>
+
+    </LinearLayout>
+</layout>
